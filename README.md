@@ -14,7 +14,7 @@ This repository presents a comparative deep learning study using different YOLO 
 
 
 ## Structures
-<pre> ```none (
+<pre> 
    .
 ├── models/                                 # Contains all trained YOLO model versions
 │
