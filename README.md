@@ -1,14 +1,27 @@
+
 # ObjectDetection-YOLO
 Assignment for UECS3413 Digital Image Processing
 
 Title: Intracranial Tumor Detection and Classification Models Comparison Using YOLO Algorithms
 
-Objectives: 
+
+## Authors
+
+- [@Cammy276](https://github.com/Cammy276)
+- [@Yu-2008] (https://github.com/Yu-2008)
+- [@flamneX] (https://github.com/flamneX)
+- [@LIOWKEHAN] (https://github.com/LIOWKEHAN)
+
+  
+## Objectives
+
 1) Train several YOLO algorithm versions (YOLOv8, YOLOv11, **YOLOv12) to detect brain tumors (glioma, meningioma, pituitary, space-occupying lesions)
+
 2) Compare the performance matrixes between the YOLO models to find the best model
 **The application of YOLOv12 in the detection and classification of intracranial tumors is currently limited
 
-Methodology:
+
+## Methodology
 1) Data Collection
 Total Images: 1986
 - Train: 1370
@@ -54,12 +67,76 @@ Total Images: 1986
 - shear: 0.0
 - perspective: 0.0
 
-Experimental Result:
+
+## Experiment Result
+
+| Fine-tuned Model | Precision | Recall | F1 Score | mAP50 | mAP50–95 |
+|------------------|-----------|--------|----------|--------|-----------|
+| YOLOv8           | 0.694 | 0.600  | 0.644 | 0.635 | 0.508 |
+| YOLOv11          | 0.650 | 0.643  | 0.646 | 0.653 | 0.502 |
+| YOLOv12          | 0.572 | 0.757 | 0.652  | 0.635 | 0.498 |
 
 
 
+## Challenges & Potential Improvements
+
+### 1. Imbalanced Dataset
+**Challenges:**
+- Certain classes (e.g., glioma, space-occupying lesion) are underrepresented
+- Low performance metrics
+- Overfitting issues
+
+**Potential Improvements:**
+- Use class-weighted loss functions
+- Use focal loss
+
+---
+
+### 2. Limited GPU Access
+**Challenges:**
+- Free Colab disconnects frequently
+- Short GPU availability
+
+**Potential Improvements:**
+- Upgrade to Colab Pro
+- Use free cloud credits from AWS or GCP
+- Train during off-peak hours
+
+---
+
+### 3. Model Selection Difficulties
+**Challenges:**
+- Confusion choosing among YOLO variants (n, s, m, l)
+- Not enough time/expertise to test all
+
+**Potential Improvements:**
+- Train each variant for a few epochs and compare
+- Refer to YOLO documentation and benchmarks
+- Use automated tuning tools
 
 
+## Conclusion
+
+| Model Version | Highest Performance Metric        | Applications                                                                 |
+|---------------|-----------------------------------|------------------------------------------------------------------------------|
+| YOLOv8        | Precision                         | High accuracy, low false positives; preliminary tumor screening or secondary confirmation tools |
+| YOLOv11       | Balanced between precision & recall | Balanced, dependable results; general diagnostics                            |
+| YOLOv12       | Recall                            | High detection rate, catches more cases; critical or high-sensitivity environments (missing a tumor could be life-threatening) |
 
 
+## Contributing
 
+Contributions are always welcome!
+
+To get started:
+
+1. **Fork** the repository to your GitHub account.
+2. **Create a new branch** for your feature or fix:  
+   `git checkout -b your-feature-name`
+3. **Make your changes** and commit them with a clear message:  
+   `git commit -m "Add: Description of your change"`
+4. **Push** your branch to your forked repository:  
+   `git push origin your-feature-name`
+5. **Open a Pull Request** from your branch to the main project.
+
+Feel free to open an issue first if you'd like to discuss your idea before implementing it.
