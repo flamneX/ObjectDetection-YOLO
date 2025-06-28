@@ -13,89 +13,26 @@ This repository presents a comparative deep learning study using different YOLO 
 - [@LIOWKEHAN] (https://github.com/LIOWKEHAN)
 
 
-## Structures
-<pre> 
-   .
-├── models/                                 # Contains all trained YOLO model versions
-│
-│   ├── yolo_v8/                            # YOLOv8-specific outputs & structure
-│   │   ├── yolov8n.pt                      # ✅ Final fine-tuned YOLOv8 model weights
-│   │   ├── yolo8_finetune/                 # 📁 Code/checkpoints/logs for fine-tuned YOLOv8
-│   │   ├── yolo8_original/                 # 📁 Code/checkpoints/logs for original YOLOv8
-│   │   ├── .config/                        # ⚙️ Environment/Colab system config
-│   │   ├── runs/
-│   │   │   └── detect/
-│   │   │       ├── original_8_train/       # 🔍 Original model on training set
-│   │   │       ├── original_8_val/         # 🔍 Original model on validation set
-│   │   │       ├── original_8_test/        # 🔍 Original model on testing set
-│   │   │       ├── finetuned_8_train/      # ✅ Fine-tuned model on training set
-│   │   │       ├── finetuned_8_valid/      # ✅ Fine-tuned model on validation set
-│   │   │       └── finetuned_8_test/       # ✅ Fine-tuned model on testing set
-│   │   └── Tumor-Detection-1/
-│   │       ├── data.yaml                   # 📄 Dataset config (classes, paths)
-│   │       ├── README.roboflow.txt         # 📄 Roboflow export metadata
-│   │       ├── train/
-│   │       │   ├── images/
-│   │       │   ├── labels/
-│   │       │   └── labels.cache
-│   │       ├── valid/
-│   │       │   ├── images/
-│   │       │   ├── labels/
-│   │       │   └── labels.cache
-│   │       └── test/
-│   │           ├── images/
-│   │           ├── labels/
-│   │           └── labels.cache
-│
-│   ├── yolo_v11/
-│   │   ├── yolov11.pt                      # ✅ Fine-tuned YOLOv11 weights
-│   │   ├── yolo11_finetune/                # 📁 Logs/checkpoints of fine-tuning
-│   │   ├── yolo11_original/                # 📁 Logs/checkpoints of original training
-│   │   ├── .config/
-│   │   ├── runs/detect/
-│   │   │   └── ...                         # Similar structure as YOLOv8
-│   │   └── Tumor-Detection-1/
-│   │       ├── data.yaml
-│   │       ├── README.roboflow.txt
-│   │       ├── train/
-│   │       ├── valid/
-│   │       └── test/
-│
-│   └── yolo_v12/
-│       ├── yolov12.pt                      # ✅ Fine-tuned YOLOv12 weights
-│       ├── yolo12_finetune/                # 📁 Fine-tuning logs/checkpoints
-│       ├── yolo12_original/                # 📁 Original training logs/checkpoints
-│       ├── .config/
-│       ├── runs/detect/
-│       │   └── ...
-│       └── Tumor-Detection-1/
-│           ├── data.yaml
-│           ├── README.roboflow.txt
-│           ├── train/
-│           ├── valid/
-│           └── test/
-│
-└── README.md                               # 📘 Main project overview
-) ``` </pre>
+## Structures <pre> 
 .
 ├── models/                                 # Contains all trained YOLO model versions
 │
 │   ├── yolo_v8/                            # YOLOv8-specific outputs & structure
-│   │   ├── yolov8n.pt                      # ✅ Final fine-tuned YOLOv8 model weights
-│   │   ├── yolo8_finetune/                 # 📁 Code/checkpoints/logs for fine-tuned YOLOv8
-│   │   ├── yolo8_original/                 # 📁 Code/checkpoints/logs for original YOLOv8
-│   │   ├── .config/                        # ⚙️ Environment/Colab system config
+│   │   ├── yolov8n.pt                      # Original Loaded YOLOv8 model
+│   │   ├── yolo8_finetune/                 # Code/checkpoints/logs and best weight for fine-tuned YOLOv8
+│   │   ├── yolo8_original/                 # Code/checkpoints/logs and best weight for original YOLOv8
+│   │   ├── .config/                        # Environment/Colab system config
 │   │   ├── runs/
 │   │   │   └── detect/
-│   │   │       ├── original_8_train/       # 🔍 Original model on training set
-│   │   │       ├── original_8_val/         # 🔍 Original model on validation set
-│   │   │       ├── original_8_test/        # 🔍 Original model on testing set
-│   │   │       ├── finetuned_8_train/      # ✅ Fine-tuned model on training set
-│   │   │       ├── finetuned_8_valid/      # ✅ Fine-tuned model on validation set
-│   │   │       └── finetuned_8_test/       # ✅ Fine-tuned model on testing set
+│   │   │       ├── original_8_train/       # Original model on training set
+│   │   │       ├── original_8_val/         # Original model on validation set
+│   │   │       ├── original_8_test/        # Original model on testing set
+│   │   │       ├── finetuned_8_train/      # Fine-tuned model on training set
+│   │   │       ├── finetuned_8_valid/      # Fine-tuned model on validation set
+│   │   │       └── finetuned_8_test/       # Fine-tuned model on testing set
 │   │   └── Tumor-Detection-1/
-│   │       ├── data.yaml                   # 📄 Dataset config (classes, paths)
-│   │       ├── README.roboflow.txt         # 📄 Roboflow export metadata
+│   │       ├── data.yaml                   # Dataset config (classes, paths)
+│   │       ├── README.roboflow.txt         # Roboflow export metadata
 │   │       ├── train/
 │   │       │   ├── images/
 │   │       │   ├── labels/
@@ -110,34 +47,13 @@ This repository presents a comparative deep learning study using different YOLO 
 │   │           └── labels.cache
 │
 │   ├── yolo_v11/
-│   │   ├── yolov11.pt                      # ✅ Fine-tuned YOLOv11 weights
-│   │   ├── yolo11_finetune/                # 📁 Logs/checkpoints of fine-tuning
-│   │   ├── yolo11_original/                # 📁 Logs/checkpoints of original training
-│   │   ├── .config/
-│   │   ├── runs/detect/
-│   │   │   └── ...                         # Similar structure as YOLOv8
-│   │   └── Tumor-Detection-1/
-│   │       ├── data.yaml
-│   │       ├── README.roboflow.txt
-│   │       ├── train/
-│   │       ├── valid/
-│   │       └── test/
+│   │   └── ... # (same structure)
 │
 │   └── yolo_v12/
-│       ├── yolov12.pt                      # ✅ Fine-tuned YOLOv12 weights
-│       ├── yolo12_finetune/                # 📁 Fine-tuning logs/checkpoints
-│       ├── yolo12_original/                # 📁 Original training logs/checkpoints
-│       ├── .config/
-│       ├── runs/detect/
-│       │   └── ...
-│       └── Tumor-Detection-1/
-│           ├── data.yaml
-│           ├── README.roboflow.txt
-│           ├── train/
-│           ├── valid/
-│           └── test/
+│       └── ... # (same structure)
 │
-└── README.md                               # 📘 Main project overview
+└── README.md                               # Main project overview
+</pre>
 
 
 ## Objectives
