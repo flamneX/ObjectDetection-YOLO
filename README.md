@@ -3,7 +3,7 @@
 Assignment for UECS3413 Digital Image Processing
 
 Title: Intracranial Tumor Detection and Classification Models Comparison Using YOLO Algorithms
-
+This repository presents a comparative deep learning study using different YOLO versions (YOLOv8, YOLOv11, and YOLOv12) for tumor detection in medical imagery.
 
 ## Authors
 
@@ -12,7 +12,37 @@ Title: Intracranial Tumor Detection and Classification Models Comparison Using Y
 - [@flamneX] (https://github.com/flamneX)
 - [@LIOWKEHAN] (https://github.com/LIOWKEHAN)
 
-  
+
+## Structures
+.
+├── models/                                 # Contains all trained YOLO model versions
+│   ├── yolo_v8/                            # YOLOv8 model files and outputs
+│   │   ├── .config                         # System & Colab config metadata
+│   │   └── runs/
+│   │       └── detect/
+│   │           ├── original_8_train/       # Original YOLOv8 train metrics & visuals
+│   │           ├── original_8_val/         # Original validation results
+│   │           ├── original_8_test/        # Original test performance
+│   │           ├── finetuned_8_train/      # Fine-tuned model on training set
+│   │           ├── finetuned_8_valid/      # Fine-tuned model on validation set
+│   │           └── finetuned_8_test/       # Final test results after fine-tuning
+│   │   └── Tumor-Detection-1/
+|   |       └── detect/
+│   │
+│   ├── yolo_v11/                           # YOLOv11 model folder (same format)
+│   │   ├── yolov11.pt
+│   │   ├── .config  
+│   │   └── runs/detect/...
+│   │   └── Tumor-Detection-1/
+|   |
+│   └── yolo_v12/                           # YOLOv12 model folder (same format)
+│   |   ├── yolov12.pt
+│   │   ├── .config 
+│   |   └── runs/detect/...
+│   │   └── Tumor-Detection-1/
+│
+└── README.md                               # Main project overview
+
 ## Objectives
 
 1) Train several YOLO algorithm versions (YOLOv8, YOLOv11, **YOLOv12) to detect brain tumors (glioma, meningioma, pituitary, space-occupying lesions)
