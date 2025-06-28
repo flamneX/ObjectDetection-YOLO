@@ -13,7 +13,8 @@ This repository presents a comparative deep learning study using different YOLO 
 - [@LIOWKEHAN] (https://github.com/LIOWKEHAN)
 
 
-## Structures <pre> 
+## Structures 
+<pre> 
 .
 ├── models/                                 # Contains all trained YOLO model versions
 │
