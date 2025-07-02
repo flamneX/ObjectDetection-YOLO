@@ -109,7 +109,7 @@ results_finetuned_8_val = fine_tuned_8_model.val(
     data=f"{dataset.location}/data.yaml", 
     split='val', 
     save_conf=True, 
-    plots=True, 
+    plots=True,
     name='finetuned_8_val'
 )
 
@@ -126,6 +126,6 @@ results_finetuned_8_test = fine_tuned_8_model.val(
     data=f"{dataset.location}/data.yaml", 
     split='test', 
     save_conf=True, 
-    plots=True, 
+    plots=True,
     name='finetuned_8_test'
 )
