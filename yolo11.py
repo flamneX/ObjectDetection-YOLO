@@ -1,7 +1,7 @@
 """YOLO11.py
 
 Original file is located at
-    https://colab.research.google.com/drive/1Pvqp-kItxLYa3bXd0as3wMQsbKQxdwlg
+    https://colab.research.google.com/drive/1Docu4WhE7yqAVa_PxzLJTIwq9MnDv5gc?usp=sharing
 """
 
 # Install necessary dependencies (run this in your terminal before running the script)

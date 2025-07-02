@@ -3,7 +3,7 @@
 YOLO8.py
 
 Original file is located at
-    https://colab.research.google.com/drive/1LN3pEZqOzrkt1M3_WVI3LpR6SqSBOaJX
+    https://colab.research.google.com/drive/1p9Kv3Hs3jlbdWG2u5tvso3i-9sNCfB98?usp=sharing
 """
 
 # Install necessary dependencies (run this in your terminal before running the script)
@@ -85,7 +85,7 @@ results_original_8_train = original_8_model.val(
     split='train', 
     save_conf=True, 
     plots=True, 
-    name='original_12_train'
+    name='original_8_train'
 )
 
 results_finetuned_8_train = fine_tuned_8_model.val(
@@ -93,7 +93,7 @@ results_finetuned_8_train = fine_tuned_8_model.val(
     split='train', 
     save_conf=True, 
     plots=True, 
-    name='finetuned_12_train'
+    name='finetuned_8_train'
 )
 
 # === VALIDATION SET ===
@@ -102,15 +102,15 @@ results_original_8_val = original_8_model.val(
     split='val', 
     save_conf=True, 
     plots=True, 
-    name='original_12_val'
+    name='original_8_val'
 )
 
 results_finetuned_8_val = fine_tuned_8_model.val(
     data=f"{dataset.location}/data.yaml", 
     split='val', 
     save_conf=True, 
-    plots=True, 
-    name='finetuned_12_val'
+    plots=True,
+    name='finetuned_8_val'
 )
 
 # === TESTING SET ===
@@ -119,13 +119,13 @@ results_original_8_test = original_8_model.val(
     split='test', 
     save_conf=True, 
     plots=True, 
-    name='original_12_test'
+    name='original_8_test'
 )
 
 results_finetuned_8_test = fine_tuned_8_model.val(
     data=f"{dataset.location}/data.yaml", 
     split='test', 
     save_conf=True, 
-    plots=True, 
-    name='finetuned_12_test'
+    plots=True,
+    name='finetuned_8_test'
 )

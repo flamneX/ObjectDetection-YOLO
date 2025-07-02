@@ -2,7 +2,7 @@
 YOLO12.py
 
 Original file is located at
-    https://colab.research.google.com/drive/1Zx-OleS-903OwRls_y-gErTehERpZSJM
+    https://colab.research.google.com/drive/1o8dOpDDcQiXBUwQ5TiBHcUInBi_Zi5Dh?usp=sharing
 """
 
 # Install necessary dependencies (run this in your terminal before running the script)
